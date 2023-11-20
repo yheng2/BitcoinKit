@@ -249,6 +249,11 @@ public struct BitArray: Hashable, RangeReplaceableCollection {
         // Int size in bits
         static let IntSize = MemoryLayout<Int>.size * 8
     }
+    
+    public func replaceSubrange<C>(_ subrange: Swift.Range<Int>, with newElements: C) where C :
+      Collection, ChartDataEntry == C.Element {
+    }
+
 }
 
 extension BitArray: MutableCollection {
